@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/26ae1efb31.js" crossorigin="anonymous"></script>
+  <title>LES PETITS PLATS</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./assets/logo.png" alt="Logo les petits plats">
+      <img src="./assets/point.png" alt="Logo les petits plats">
+    </div>
+    <h2>CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
+    <div class="search">
+      <input type="text" placeholder="Rechercher une recette, un ingrédient, ...">
+      <img src="./assets/search.svg" alt="Search button">
+    </div>
+  </header>
+  <main>
+    <div class="filters">
+      <div class="filter">
+        <p class="filter-text">Ingrédients</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter">
+        <p class="filter-text">Appareils</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="filter">
+        <p class="filter-text">Ustensiles</p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+
+    <section class="recettes-card"></section>
+  </main>
+  <script src="./script/index.js"></script>
+  <script src="./script/templates/recettes.js"></script>
+  <script src="./script/search.js"></script>
+</body>
+
+</html>
