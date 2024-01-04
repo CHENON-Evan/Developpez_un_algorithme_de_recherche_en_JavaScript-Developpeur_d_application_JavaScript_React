@@ -19,31 +19,67 @@
     </div>
     <h2>CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
     <div class="search">
-      <input type="text" placeholder="Rechercher une recette, un ingrédient, ...">
+      <input class="search-input-main" type="text" placeholder="Rechercher une recette, un ingrédient, ...">
       <img src="./assets/search.svg" alt="Search button">
     </div>
   </header>
   <main>
     <div class="filters">
-      <div class="filter">
-        <p class="filter-text">Ingrédients</p>
-        <i class="fa-solid fa-chevron-down"></i>
+      <div class="recipes-filter-ingredients" id="filter-tag">
+        <button class="dropdown-btn" for="ingredients">Ingrédients
+          <i id="chevron-icon-ingredients" class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div id="list-ingredients" class="search-list-option">
+          <div class="search-tag">
+            <input class="search-tag-input-ingredient" type="text">
+            <span class="search-tag-icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <ul class="list-option-tag-ingredients" id="option-tag"></ul>
+        </div>
       </div>
-      <div class="filter">
-        <p class="filter-text">Appareils</p>
-        <i class="fa-solid fa-chevron-down"></i>
+
+      <div class="recipes-filter-appliances" id="filter-tag">
+        <button class="dropdown-btn" for="appareils">Appareils
+          <i id="chevron-icon-appliances" class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div id="list-appliances" class="search-list-option">
+          <div class="search-tag">
+            <input class="search-tag-input-appliance" type="text">
+            <span class="search-tag-icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <ul class="list-option-tag-appliances" id="option-tag"></ul>
+        </div>
       </div>
-      <div class="filter">
-        <p class="filter-text">Ustensiles</p>
-        <i class="fa-solid fa-chevron-down"></i>
+
+      <div class="recipes-filter-ustensils" id="filter-tag">
+        <button class="dropdown-btn" for="ustensiles">Ustensiles
+          <i id="chevron-icon-ustensils" class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div id="list-ustensils" class="search-list-option">
+          <div class="search-tag">
+            <input class="search-tag-input-ustensils" id="filterInput" type="text">
+            <span class="search-tag-icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+          <ul class="list-option-tag-ustensils" id="option-tag"></ul>
+        </div>
       </div>
+
+      <p class="number-recipe" id="counter-recipe">50 recettes</p>
+
     </div>
 
-    <section class="recettes-card"></section>
+    <div class="selected-item"></div>
+
+    <section class="recipes-card"></section>
   </main>
-  <script src="./script/index.js"></script>
-  <script src="./script/templates/recettes.js"></script>
-  <script src="./script/search.js"></script>
+  <script src="./script/index.js" type="module"></script>
+
 </body>
 
 </html>
