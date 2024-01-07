@@ -40,12 +40,6 @@ export function modifFilterAppliance(recipes) {
     applianceItem.innerHTML = appliance.toLowerCase();
 
     applianceItem.addEventListener('click', () => {
-      document.querySelectorAll('.selected-appliance-item').forEach((item) => {
-        item.classList.remove('selected-appliance-item');
-      });
-
-      applianceItem.classList.add('selected-appliance-item');
-
       selectAppliance(appliance.toLowerCase());
     });
 

@@ -65,6 +65,12 @@ h2,
   font-weight: 400;
 }
 
+/**/
+.selected-ingredient {
+  background-color: yellow;
+}
+/**/
+
 .search {
   width: 954px;
   height: 72px;

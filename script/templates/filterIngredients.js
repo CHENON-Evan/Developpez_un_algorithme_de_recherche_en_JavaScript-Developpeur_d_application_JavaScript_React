@@ -42,12 +42,6 @@ export function modifFilterIngredients(recipes) {
     ingredientItem.innerHTML = ingredient.toLowerCase();
 
     ingredientItem.addEventListener('click', () => {
-      document.querySelectorAll('.ingredient-item').forEach((item) => {
-        item.classList.remove('selected-ingredient-item');
-      });
-
-      ingredientItem.classList.add('selected-ingredient-item');
-
       selectIngredient(ingredient.toLowerCase());
     });
 
