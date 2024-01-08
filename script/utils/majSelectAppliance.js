@@ -15,6 +15,7 @@ export function majSelectAppliance(recipes) {
   const tabAppliance = Object.keys(objAppliances);
   tabAppliance.sort((a, b) => a.localeCompare(b));
   appliances = [...tabAppliance];
+
   tabAppliance.forEach((appliance) => {
     const applianceItem = document.createElement('li');
     applianceItem.className = 'appliance-item';
@@ -33,5 +34,16 @@ export function selectAppliance(appliance) {
     tags.push({ type: 'appliance', value: appliance });
     updateRecipes();
     displayTags();
+
+    const listIngredients = document.querySelectorAll('.search-list-option');
+    listIngredients.forEach((listIngredient) => {
+      listIngredient.style.display = 'none';
+    });
+
+    const icons = document.querySelectorAll('.fa-solid');
+    icons.forEach((icon) => {
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    });
   }
 }

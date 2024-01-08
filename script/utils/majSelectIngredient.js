@@ -25,9 +25,9 @@ export function majSelectIngredient(recipes) {
     ingredientItem.className = 'ingredient-item';
     ingredientItem.setAttribute('data-ingredient', ingredient);
     ingredientItem.innerHTML = ingredient;
-    ingredientItem.addEventListener('click', () =>
-      selectIngredient(ingredient)
-    );
+    ingredientItem.addEventListener('click', () => {
+      selectIngredient(ingredient);
+    });
     listIngredient.appendChild(ingredientItem);
   });
 }
@@ -40,5 +40,16 @@ export function selectIngredient(ingredient) {
     tags.push({ type: 'ingredient', value: ingredient });
     updateRecipes();
     displayTags();
+
+    const listIngredients = document.querySelectorAll('.search-list-option');
+    listIngredients.forEach((listIngredient) => {
+      listIngredient.style.display = 'none';
+    });
+
+    const icons = document.querySelectorAll('.fa-solid');
+    icons.forEach((icon) => {
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    });
   }
 }

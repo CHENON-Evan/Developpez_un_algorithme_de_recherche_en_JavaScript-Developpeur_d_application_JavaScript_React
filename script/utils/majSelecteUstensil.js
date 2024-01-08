@@ -11,7 +11,7 @@ export function majSelectUstensil(recipes) {
   const objUstensils = {};
   recipes.forEach((recipe) => {
     recipe.ustensils.forEach((ustensil) => {
-      objUstensils[ustensil] = ustensil;
+      objUstensils[ustensil.toLowerCase()] = ustensil;
     });
   });
 
@@ -33,9 +33,20 @@ export function selectUstensil(ustensil) {
   const index = tags.findIndex(
     (t) => t.type === 'ustensil' && t.value === ustensil
   );
-  if (index == -1) {
+  if (index === -1) {
     tags.push({ type: 'ustensil', value: ustensil });
     updateRecipes();
     displayTags();
+
+    const listIngredients = document.querySelectorAll('.search-list-option');
+    listIngredients.forEach((listIngredient) => {
+      listIngredient.style.display = 'none';
+    });
+
+    const icons = document.querySelectorAll('.fa-solid');
+    icons.forEach((icon) => {
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    });
   }
 }

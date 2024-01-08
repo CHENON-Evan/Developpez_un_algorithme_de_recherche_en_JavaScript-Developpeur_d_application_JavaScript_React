@@ -13,10 +13,17 @@ export async function updateRecipes() {
   let recipeText;
 
   if (numberOfRecipes === 0) {
-    recipeText = "Aucune recette n'a été trouver";
+    recipeText = "Aucune recette n'a été trouvée";
   } else {
     recipeText = numberOfRecipes === 1 ? 'recette' : 'recettes';
   }
   recipeCounter.textContent =
     numberOfRecipes === 0 ? recipeText : `${numberOfRecipes} ${recipeText}`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateRecipes();
+
+  const searchBar = document.querySelector('.search-input-main');
+  searchBar.addEventListener('input', updateRecipes);
+});
