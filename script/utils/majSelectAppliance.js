@@ -35,9 +35,9 @@ export function selectAppliance(appliance) {
     updateRecipes();
     displayTags();
 
-    const listIngredients = document.querySelectorAll('.search-list-option');
-    listIngredients.forEach((listIngredient) => {
-      listIngredient.style.display = 'none';
+    const listAppliances = document.querySelectorAll('.search-list-option');
+    listAppliances.forEach((listAppliance) => {
+      listAppliance.style.display = 'none';
     });
 
     const icons = document.querySelectorAll('.fa-solid');

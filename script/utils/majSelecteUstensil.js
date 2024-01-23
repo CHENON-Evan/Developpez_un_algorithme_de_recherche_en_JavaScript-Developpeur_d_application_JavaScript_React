@@ -38,9 +38,9 @@ export function selectUstensil(ustensil) {
     updateRecipes();
     displayTags();
 
-    const listIngredients = document.querySelectorAll('.search-list-option');
-    listIngredients.forEach((listIngredient) => {
-      listIngredient.style.display = 'none';
+    const listUstensils = document.querySelectorAll('.search-list-option');
+    listUstensils.forEach((listUstensil) => {
+      listUstensil.style.display = 'none';
     });
 
     const icons = document.querySelectorAll('.fa-solid');
