@@ -7,10 +7,15 @@ import { majSelectUstensil } from './majSelecteUstensil.js';
 
 export function searchTowStep(recipes) {
   const input = document.querySelector('.search-input-main');
-  const recipeInputFiltered = filterByInput(
-    recipes,
-    input.value.trim().toLowerCase()
-  );
+  const searchElems = input.value.trim().split(' ');
+  console.log(searchElems);
+  let recipeInputFiltered = [...recipes];
+  searchElems.forEach((searchElem) => {
+    recipeInputFiltered = filterByInput(
+      recipeInputFiltered,
+      searchElem.toLowerCase()
+    );
+  });
 
   let recipeTagFiltered = [...recipeInputFiltered];
 

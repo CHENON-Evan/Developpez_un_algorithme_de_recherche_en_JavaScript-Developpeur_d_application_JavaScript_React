@@ -4,8 +4,6 @@ export function filterByInput(recipes, input) {
       searchRecipe(recipe, input)
     );
 
-    recipeFiltered.forEach((recipe) => console.log(recipe.name));
-
     return recipeFiltered;
   } else {
     return [...recipes];
@@ -15,7 +13,6 @@ export function filterByInput(recipes, input) {
 function searchRecipe(recipe, input) {
   const normalizedSearchTerm = normalizeString(input);
   const normalizedTitle = normalizeString(recipe.name);
-  console.log(recipe.name);
 
   const normailzedIngredients = recipe.ingredients.some((ingredient) =>
     normalizeString(ingredient.ingredient).includes(normalizedSearchTerm)
